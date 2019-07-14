@@ -160,6 +160,7 @@ class my_build_ext(build_ext):
                             ('NOMINMAX', None)]
             extra_compile_args = ['/GR', '/FD', '/Zm250', '/EHsc', '/bigobj' ]
             extra_link_args = ['/subsystem:windows', machinetype]
+            self.libraries += [ "kernel32","user32","gdi32","winspool","comdlg32","advapi32","shell32","ole32","oleaut32","uuid","odbc32","odbccp32" ]
 
             if self.debug:
                 if self.static:

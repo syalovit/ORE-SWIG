@@ -4,6 +4,13 @@
  All rights reserved.
 */
 
+
+%{
+#ifdef _MSC_VER
+#define SWIG_PYTHON_INTERPRETER_NO_DEBUG
+#endif
+%}
+
 #if defined(SWIGRUBY)
 %module QuantExtc
 #elif defined(SWIGCSHARP)

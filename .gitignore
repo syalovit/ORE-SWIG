@@ -219,3 +219,6 @@ ipch/
 
 *log.txt
 *.dat
+/OREAnalytics-SWIG/Python/vc140.pdb
+/QuantExt-SWIG/Python/vc140.idb
+/QuantExt-SWIG/Python/vc140.pdb
