@@ -34,10 +34,18 @@
 #define BOOST_LIB_NAME boost_system
 #include <boost/config/auto_link.hpp>
 #endif
+boost::shared_ptr<ore::analytics::StressTestScenarioData> fromXMLFile(std::string fName)
+{
+	boost::shared_ptr<ore::analytics::StressTestScenarioData> data = boost::make_shared<ore::analytics::StressTestScenarioData>();
+	data->fromFile(fName);
+	return data;
+};
 
 %}
 
 %include orea_app.i
+
+boost::shared_ptr<ore::analytics::StressTestScenarioData> fromXMLFile(std::string fName);
 
 
 namespace ore {
@@ -56,6 +64,7 @@ namespace analytics {
 
   \ingroup simulation
 */
+
 class StressTest {
 public:
     //! Constructor
